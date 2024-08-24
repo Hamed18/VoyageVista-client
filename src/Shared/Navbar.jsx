@@ -1,16 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import userdefaultPic from "../assets/Images/user.png";
-//import { useContext } from "react";
-//import { AuthContext } from "../Providers/AuthProviders";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProviders";
 
 const Navbar = () => {
- // const { user, logOut } = useContext(AuthContext);
+ const { user, logOut } = useContext(AuthContext);
 
-/*  const handleSignOut = () => {
+  const handleSignOut = () => {
     logOut()
     .then()
     .catch();
-  };  */
+  }; 
 
   const navLinks = (
     <>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
 
-       {/* <div className="navbar-end">
+       <div className="navbar-end">
           {user ? (
             <div className="flex mr-2">
               <div className="w-10 rounded-full md:tooltip md:tooltip-left" data-tip={user.displayName}>
@@ -82,9 +82,7 @@ const Navbar = () => {
               <button className="btn btn-primary">Login</button>
             </Link>
           )}  
-		  <div className="w-10 rounded-full md:tooltip md:tooltip-left"></div>
-		    <img alt="Tailwind CSS Navbar component" src={userdefaultPic} className="rounded-full mr-1" />
-		  </div>  */}
+		</div> 
       </div>
     </div>
   );
