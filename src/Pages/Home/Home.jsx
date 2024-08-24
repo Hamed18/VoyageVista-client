@@ -1,8 +1,12 @@
+import Footer from "../../Shared/Footer";
+import Header from "../../Shared/Header";
+import Navbar from "../../Shared/Navbar";
 
 const Home = () => {
 	return (
 		<div>
-			<h3 className="text-center">Home Page</h3>
+			<Header></Header>
+			<Footer></Footer>
 		</div>
 	);
 };
