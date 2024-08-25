@@ -1,0 +1,129 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/KjVtt7m/Sundarban.jpg",
+        "tourist_spot_name": "Sundarban",
+        "country_name": "Bangladesh",
+        "location": "Khulna",
+        "short_description": "The largest mangrove forest in the world, home to the Bengal tiger.",
+        "average_cost": 300,
+        "seasonality": "Winter, Spring",
+        "travel_time": "5 days",
+        "totalVisitorsPerYear": 200000
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/QDCvqdC/cox.jp",
+        "tourist_spot_name": "Cox’s Bazar",
+        "country_name": "Bangladesh",
+        "location": "Cox’s Bazar",
+        "short_description": "The longest natural sea beach in the world, stretching over 120 km.",
+        "average_cost": 150,
+        "seasonality": "Winter, Autumn",
+        "travel_time": "3 days",
+        "totalVisitorsPerYear": 2500000
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/sHd7LXm/bangkok.png",
+        "tourist_spot_name": "Bangkok",
+        "country_name": "Thailand",
+        "location": "Bangkok",
+        "short_description": "The capital city of Thailand, known for its vibrant street life and cultural landmarks.",
+        "average_cost": 500,
+        "seasonality": "All Year",
+        "travel_time": "7 days",
+        "totalVisitorsPerYear": 22000000
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Phuket",
+        "country_name": "Thailand",
+        "location": "Phuket",
+        "short_description": "Thailand’s largest island, known for its stunning beaches and lively nightlife.",
+        "average_cost": 700,
+        "seasonality": "Winter, Spring",
+        "travel_time": "5 days",
+        "totalVisitorsPerYear": 10000000
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Bali",
+        "country_name": "Indonesia",
+        "location": "Bali",
+        "short_description": "A popular island destination known for its forested volcanic mountains and coral reefs.",
+        "average_cost": 1000,
+        "seasonality": "All Year",
+        "travel_time": "8 days",
+        "totalVisitorsPerYear": 6000000
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Borobudur Temple",
+        "country_name": "Indonesia",
+        "location": "Magelang",
+        "short_description": "A 9th-century Mahayana Buddhist temple and the world’s largest Buddhist temple.",
+        "average_cost": 300,
+        "seasonality": "Spring, Autumn",
+        "travel_time": "4 days",
+        "totalVisitorsPerYear": 3500000
+    },
+    {
+        "id": 7,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Langkawi",
+        "country_name": "Malaysia",
+        "location": "Langkawi",
+        "short_description": "An archipelago of 99 islands known for its beaches, rainforest, and duty-free shopping.",
+        "average_cost": 800,
+        "seasonality": "Summer, Spring",
+        "travel_time": "6 days",
+        "totalVisitorsPerYear": 4000000
+    },
+    {
+        "id": 8,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Kuala Lumpur",
+        "country_name": "Malaysia",
+        "location": "Kuala Lumpur",
+        "short_description": "The capital of Malaysia, known for its modern skyline dominated by the Petronas Towers.",
+        "average_cost": 600,
+        "seasonality": "All Year",
+        "travel_time": "4 days",
+        "totalVisitorsPerYear": 12000000
+    },
+    {
+        "id": 9,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Ha Long Bay",
+        "country_name": "Vietnam",
+        "location": "Quang Ninh",
+        "short_description": "A UNESCO World Heritage Site known for its emerald waters and thousands of towering limestone islands.",
+        "average_cost": 400,
+        "seasonality": "Spring, Autumn",
+        "travel_time": "5 days",
+        "totalVisitorsPerYear": 5000000
+    },
+    {
+        "id": 10,
+        "image": "https://i.ibb.co/JCdbbxv/phuket.jpg",
+        "tourist_spot_name": "Angkor Wat",
+        "country_name": "Cambodia",
+        "location": "Siem Reap",
+        "short_description": "The largest religious monument in the world, originally constructed as a Hindu temple dedicated to Vishnu.",
+        "average_cost": 200,
+        "seasonality": "Winter, Spring",
+        "travel_time": "7 days",
+        "totalVisitorsPerYear": 2500000
+    }
+]
+
+https://i.ibb.co/S0ZFpQf/bali.jpg
+https://i.ibb.co/sHd7LXm/bangkok.png
+https://i.ibb.co/6NqSbFb/comb.jpg
+https://i.ibb.co/Chrp9qp/images.jpg
+
+
