@@ -9,6 +9,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ErrorPage from "./ErrorPage";
 import HomeCardDetails from "../Pages/Home/HomeCardDetails";
+import MyListPageCard from "../Pages/MyListPageCard";
 
 const routes = createBrowserRouter([
 	{
@@ -38,6 +39,10 @@ const routes = createBrowserRouter([
 		{
 			path: "/mylist",
 			element: <MyList></MyList>
+		},
+		{
+			path: "/myListCard",
+			element: <MyListPageCard></MyListPageCard>
 		},
 		{
 			path: "/login",

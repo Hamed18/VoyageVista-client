@@ -8,7 +8,8 @@ const Home = () => {
 	return (
 		<div className="max-w-6xl mx-auto mb-2">
 			<Header></Header>
-			<h3 className="text-center text-3xl mt-8 mb-2 font-bold">Explore the World!</h3>
+			<h3 className="text-center text-3xl mt-8 font-bold">Explore the World!</h3>
+			<p className="text-center mb-8 mt-2">Dive into our curated selection of breathtaking destinations and unique experiences that await you around the globe. Whether you're dreaming of tranquil beaches, bustling cityscapes, or awe-inspiring natural wonders, our collection offers something for every type of traveler.</p>
 			{/* main section */}
             <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{
