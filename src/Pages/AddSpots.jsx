@@ -1,8 +1,46 @@
 const AddSpots = () => {
+	const handleAddSpot = event => {
+		event.preventDefault();
+	  
+		const form = event.target;
+	  
+		const userEmail = form.userEmail.value;
+		const userName = form.userName.value;
+		const image = form.image.value;
+		const touristSpotName = form.touristSpotName.value;
+		const countryName = form.countryName.value;
+		const location = form.location.value;
+		const shortDescription = form.shortDescription.value;
+		const averageCost = form.averageCost.value;
+		const seasonality = form.seasonality.value;
+		const travelTime = form.travelTime.value;
+		const totalVisitors = form.totalVisitors.value;
+	  
+		// Create an object from user input data
+		const newSpot = {
+		  userEmail,
+		  userName,
+		  image,
+		  touristSpotName,
+		  countryName,
+		  location,
+		  shortDescription,
+		  averageCost: parseInt(averageCost, 10), // Convert to number
+		  seasonality,
+		  travelTime,
+		  totalVisitors: parseInt(totalVisitors, 10) // Convert to number
+		};
+	  
+		// Log the object or handle it as needed
+		console.log("New Tourist Spot Data:", newSpot);
+	  
+		// You can add logic here to submit this data to a server or handle it as needed
+	  };
+	  
   return (
     <div className="max-w-6xl mx-auto">
       <section class="p-6 bg-gray-100 dark:bg-gray-900">
-        <form class="container flex flex-col mx-auto space-y-12">
+        <form onSubmit={handleAddSpot} class="container flex flex-col mx-auto space-y-12">
           <fieldset class="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-white dark:bg-gray-800">
             <div class="space-y-2 col-span-full lg:col-span-1">
               <p class="font-medium text-gray-900 dark:text-gray-100">
