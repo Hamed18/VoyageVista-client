@@ -8,6 +8,7 @@ import MyList from "../Pages/MyList";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ErrorPage from "./ErrorPage";
+import HomeCardDetails from "../Pages/Home/HomeCardDetails";
 
 const routes = createBrowserRouter([
 	{
@@ -20,6 +21,11 @@ const routes = createBrowserRouter([
 			element: <Home></Home>,
 			loader: () => fetch('http://localhost:5000/TouristSpots')
 		},
+		// {
+		// 	path: "/:_id",
+		// 	element: <HomeCardDetails></HomeCardDetails>,
+		// 	loader: ({params}) => fetch(`http://localhost:5000/TouristSpots/${params.id}`) 
+		// },
 		{
 			path: "/allspots",
 			element: <AllSpots></AllSpots>
