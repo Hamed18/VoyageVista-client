@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 const AddSpots = () => {
 	const handleAddSpot = event => {
 		event.preventDefault();
@@ -27,14 +28,35 @@ const AddSpots = () => {
 		  shortDescription,
 		  averageCost: parseInt(averageCost, 10), // Convert to number
 		  seasonality,
-		  travelTime,
+		  travelTime: parseInt(travelTime,10),
 		  totalVisitors: parseInt(totalVisitors, 10) // Convert to number
 		};
 	  
 		// Log the object or handle it as needed
 		console.log("New Tourist Spot Data:", newSpot);
 	  
-		// You can add logic here to submit this data to a server or handle it as needed
+		// add logic here to submit this data to a server or handle it as needed
+		fetch('http://localhost:5000/allUsersAddedSpots',{
+			method: 'POST',
+			headers: {
+				'content-type' : 'application/json'
+			},
+			body: JSON.stringify(newSpot)
+		})
+		.then(res => res.json())
+		.then(data => {
+			console.log(data);
+			// sweet alert
+			if (data.insertedId){
+				Swal.fire({
+					title: "Success",
+					text: "User Added Successfully",
+					icon: "success",
+					confirmButtonText: 'cool'
+				});
+			}
+
+		})
 	  };
 	  
   return (
