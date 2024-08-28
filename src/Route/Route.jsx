@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import ErrorPage from "./ErrorPage";
 import HomeCardDetails from "../Pages/Home/HomeCardDetails";
 import MyListPageCard from "../Pages/MyListPageCard";
+import PrivateRoutes from "./PrivateRoutes";
 
 const routes = createBrowserRouter([
 	{
@@ -24,7 +25,7 @@ const routes = createBrowserRouter([
 		},
 		{
 			path: "/:id",
-			element: <HomeCardDetails></HomeCardDetails>,
+			element: <PrivateRoutes><HomeCardDetails></HomeCardDetails></PrivateRoutes>,
 			loader: ({params}) => fetch(`http://localhost:5000/TouristSpots/${params.id}`) 
 		},
 		{
@@ -34,11 +35,11 @@ const routes = createBrowserRouter([
 		},
 		{
 			path: "/addspots",
-			element: <AddSpots></AddSpots>
+			element: <PrivateRoutes><AddSpots></AddSpots></PrivateRoutes>
 		},
 		{
 			path: "/mylist",
-			element: <MyList></MyList>
+			element: <PrivateRoutes><MyList></MyList></PrivateRoutes>
 		},
 		{
 			path: "/myListCard",

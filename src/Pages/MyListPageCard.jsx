@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-const MyListPageCard = ({ myList }) => {
+const MyListPageCard = ({ myList,handleDelete }) => {
   const {
+	_id,
     touristSpotName,
     location,
     image,
@@ -9,7 +10,7 @@ const MyListPageCard = ({ myList }) => {
     averageCost,
     travelTime,
   } = myList;
-  
+
   return (
     <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
       <div className="overflow-x-auto">
@@ -53,7 +54,7 @@ const MyListPageCard = ({ myList }) => {
                     <button className="btn btn-outline btn-secondary">
                       UPDATE
                     </button>
-                    <button className="btn btn-outline btn-warning">
+                    <button onClick={()=> handleDelete(_id)} className="btn btn-outline btn-warning">
                       DELETE
                     </button>
                   </div>

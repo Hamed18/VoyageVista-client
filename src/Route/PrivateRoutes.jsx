@@ -7,8 +7,12 @@ const PrivateRoutes = ({children}) => {
 
 	if (loading){
 		// console.log("loading happens");
-		return <span className="bg-green-700"></span>
+		return <progress className="progress w-56"></progress>
 	}
+	if(user?.email){
+        return children;
+    }
+	return <Navigate to="/login" replace></Navigate>;
 
 };
 

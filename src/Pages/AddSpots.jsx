@@ -86,6 +86,7 @@ const AddSpots = () => {
                 <input
                   id="userEmail"
                   type="email"
+                  defaultValue={user?.userEmail}
                   placeholder="User Email"
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
