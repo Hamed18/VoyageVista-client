@@ -10,7 +10,8 @@ const HomeCardDetails = () => {
 	// const {tourist_spot_name} = spot;
 	return (
 		<div>
-			<h3 className="text-center">details</h3>
+			<h3 className="text-center">details of {spotDetail._id}</h3>
+			<h3 className="text-center">details of {spotDetail.tourist_spot_name}</h3>
 		</div>
 	);
 };

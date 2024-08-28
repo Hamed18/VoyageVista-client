@@ -22,11 +22,11 @@ const routes = createBrowserRouter([
 			element: <Home></Home>,
 			loader: () => fetch('http://localhost:5000/TouristSpots')
 		},
-		// {
-		// 	path: "/:_id",
-		// 	element: <HomeCardDetails></HomeCardDetails>,
-		// 	loader: ({params}) => fetch(`http://localhost:5000/TouristSpots/${params.id}`) 
-		// },
+		{
+			path: "/:id",
+			element: <HomeCardDetails></HomeCardDetails>,
+			loader: ({params}) => fetch(`http://localhost:5000/TouristSpots/${params.id}`) 
+		},
 		{
 			path: "/allspots",
 			element: <AllSpots></AllSpots>,

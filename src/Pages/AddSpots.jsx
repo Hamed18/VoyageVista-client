@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../Providers/AuthProviders';
 const AddSpots = () => {
+  const {user} = useContext(AuthContext);
 	const handleAddSpot = event => {
 		event.preventDefault();
 	  
 		const form = event.target;
 	  
-		const userEmail = form.userEmail.value;
+		const userEmail = user.userEmail;
 		const userName = form.userName.value;
 		const image = form.image.value;
 		const touristSpotName = form.touristSpotName.value;
