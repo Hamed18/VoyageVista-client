@@ -11,6 +11,7 @@ import ErrorPage from "./ErrorPage";
 import HomeCardDetails from "../Pages/Home/HomeCardDetails";
 import MyListPageCard from "../Pages/MyListPageCard";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateMyList from "../Pages/UpdateMyList";
 
 const routes = createBrowserRouter([
 	{
@@ -41,9 +42,14 @@ const routes = createBrowserRouter([
 			path: "/mylist",
 			element: <PrivateRoutes><MyList></MyList></PrivateRoutes>
 		},
+		// {
+		// 	path: "/myListCard",
+		// 	element: <MyListPageCard></MyListPageCard>
+		// },
 		{
-			path: "/myListCard",
-			element: <MyListPageCard></MyListPageCard>
+			path: "/mylist/:id/:id",
+			element: <UpdateMyList></UpdateMyList>,
+			loader: ({params}) => fetch(`http://localhost:5000/AllSpots/${params.id}/${params.id}`)
 		},
 		{
 			path: "/login",

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MyListPageCard = ({ myList,handleDelete }) => {
   const {
-	_id,
+	  _id,
     touristSpotName,
     location,
     image,
@@ -51,9 +51,11 @@ const MyListPageCard = ({ myList,handleDelete }) => {
               </td>
               <td className="p-3 text-right ">
                   <div className="flex justify-start mr-2">
-                    <button className="btn btn-outline btn-secondary">
-                      UPDATE
-                    </button>
+                    <Link to = {`mylist/${_id}`}>
+                      <button className="btn btn-outline btn-secondary">
+                         UPDATE
+                      </button>
+                    </Link>
                     <button onClick={()=> handleDelete(_id)} className="btn btn-outline btn-warning">
                       DELETE
                     </button>
