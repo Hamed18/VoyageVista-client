@@ -59,6 +59,14 @@ const UpdateMyList = () => {
 					confirmButtonText: 'OK'
 				});
 			}
+			if (data.modifiedCount === 0){
+				Swal.fire({
+					title: "Oops!",
+					text: "You haven't update anything!",
+					icon: "failure",
+					confirmButtonText: 'OK'
+				});
+			}
 		})
 	}
 
