@@ -53,7 +53,7 @@ const AddSpots = () => {
 			if (data.insertedId){
 				Swal.fire({
 					title: "Success",
-					text: "User Added Successfully",
+					text: "New Tourist Spot Added Successfully",
 					icon: "success",
 					confirmButtonText: 'cool'
 				});
@@ -64,6 +64,7 @@ const AddSpots = () => {
 	  
   return (
     <div className="max-w-6xl mx-auto">
+      <h3 className="text-center font-bold text-3xl mt-8 mb-6">Add New Tourist Spot</h3>
       <section class="p-6 bg-gray-100 dark:bg-gray-900">
         <form onSubmit={handleAddSpot} class="container flex flex-col mx-auto space-y-12">
           <fieldset class="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-white dark:bg-gray-800">

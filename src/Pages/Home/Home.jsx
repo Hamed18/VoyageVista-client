@@ -6,7 +6,7 @@ import HomePageCard from "./HomePageCard";
 const Home = () => {
 	const TouristSpots = useLoaderData();
 	return (
-		<div className="max-w-6xl mx-auto mb-2">
+		<div className="mb-2">
 			<Header></Header>
 			<h3 className="text-center text-3xl mt-8 font-bold">Explore the World!</h3>
 			<p className="text-center mb-8 mt-2">Dive into our curated selection of breathtaking destinations and unique experiences that await you around the globe. Whether you're dreaming of tranquil beaches, bustling cityscapes, or awe-inspiring natural wonders, our collection offers something for every type of traveler.</p>
@@ -21,7 +21,6 @@ const Home = () => {
 					)
 				}
 			</div>
-			<Footer></Footer>
 		</div>
 	);
 };
