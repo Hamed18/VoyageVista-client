@@ -36,7 +36,7 @@ const routes = createBrowserRouter([
 		},
 		{
 			path: "/allspots/:id",
-			element: <AllSpotCardDetails></AllSpotCardDetails>,
+			element: <PrivateRoutes><AllSpotCardDetails></AllSpotCardDetails></PrivateRoutes>,
 			loader: ({params}) => fetch(`http://localhost:5000/allspot/${params.id}`)
 		},
 		{
