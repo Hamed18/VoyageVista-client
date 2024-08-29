@@ -25,7 +25,7 @@ const MyListPageCard = ({ myList,handleDelete }) => {
           </colgroup>
           <thead className="dark:bg-gray-300">
             <tr className="text-left">
-              <th className="p-3">Spot Name #</th>
+              <th className="p-3">Spot Name</th>
               <th className="p-3">Location</th>
               <th className="p-3">Average Cost</th>
               <th className="p-3 text-right">Travel Time</th>
@@ -50,9 +50,9 @@ const MyListPageCard = ({ myList,handleDelete }) => {
                 </span>
               </td>
               <td className="p-3 text-right ">
-                  <div className="flex justify-start mr-2">
+                  <div className="md:flex-row sm:flex-col sm:mb-1  md:justify-start md:mr-2">
                     <Link to = {`mylist/${_id}`}>
-                      <button className="btn btn-outline btn-secondary">
+                      <button className="btn btn-outline btn-secondary mr-2">
                          UPDATE
                       </button>
                     </Link>

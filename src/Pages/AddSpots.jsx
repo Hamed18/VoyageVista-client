@@ -8,8 +8,8 @@ const AddSpots = () => {
 	  
 		const form = event.target;
 	  
-		const userEmail = user.userEmail;
-		const userName = form.userName.value;
+		const userEmail = user.email;
+		const userName = user.displayName;
 		const image = form.image.value;
 		const touristSpotName = form.touristSpotName.value;
 		const countryName = form.countryName.value;
@@ -86,7 +86,7 @@ const AddSpots = () => {
                 <input
                   id="userEmail"
                   type="email"
-                  defaultValue={user?.userEmail}
+                  defaultValue={user?.email}
                   placeholder="User Email"
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
@@ -102,6 +102,7 @@ const AddSpots = () => {
                   id="userName"
                   type="text"
                   placeholder="User Name"
+                  defaultValue={user?.displayName}
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>

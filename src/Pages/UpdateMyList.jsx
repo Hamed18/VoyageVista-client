@@ -1,13 +1,71 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
+import Swal from "sweetalert2";
 
 const UpdateMyList = () => {
+	const {user} = useContext(AuthContext);
+	
 	const list = useLoaderData();
 	const {_id,image,touristSpotName,countryName,location,shortDescription,averageCost,totalVisitors,travelTime,seasonality} = list;
+	
+	const handleUpdateSpot = e => {
+		e.preventDefault();
+		const form = e.target;
+
+		const userEmail = user.email;
+		const userName = user.displayName;
+		const image = form.image.value;
+		const touristSpotName = form.touristSpotName.value;
+		const countryName = form.countryName.value;
+		const location = form.location.value;
+		const shortDescription = form.shortDescription.value;
+		const averageCost = form.averageCost.value;
+		const seasonality = form.seasonality.value;
+		const travelTime = form.travelTime.value;
+		const totalVisitors = form.totalVisitors.value;
+	  
+		// Create an object from user input data
+		const updatedSpot = {
+		  userEmail,
+		  userName,
+		  image,
+		  touristSpotName,
+		  countryName,
+		  location,
+		  shortDescription,
+		  averageCost: parseInt(averageCost, 10), // Convert to number
+		  seasonality,
+		  travelTime: parseInt(travelTime,10),
+		  totalVisitors: parseInt(totalVisitors, 10) // Convert to number
+		};
+		console.log('updated spot', updatedSpot);
+
+		fetch(`http://localhost:5000/AllSpots/${userEmail}/${_id}`,{
+            method: 'PUT',
+			headers: {
+				'content-type' : 'application/json'
+			},
+			body: JSON.stringify(updatedSpot)
+		})
+		.then(res => res.json())
+		.then(data => {
+			console.log(data);
+			if (data.modifiedCount > 0){
+				Swal.fire({
+					title: "Success",
+					text: "Tourist Spot Updated Successfully",
+					icon: "success",
+					confirmButtonText: 'OK'
+				});
+			}
+		})
+	}
+
 	return (
 		<div className="max-w-6xl mx-auto">
 		<section class="p-6 bg-gray-100 dark:bg-gray-900">
-		  <form  class="container flex flex-col mx-auto space-y-12">
+		  <form onSubmit={handleUpdateSpot} class="container flex flex-col mx-auto space-y-12">
 
   
 			<fieldset class="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-white dark:bg-gray-800">
@@ -99,12 +157,12 @@ const UpdateMyList = () => {
 					for="averageCost"
 					class="text-sm text-gray-900 dark:text-gray-100"
 				  >
-					Average Cost
+					Average Cost ($)
 				  </label>
 				  <input
 					id="averageCost"
 					type="number"
-					placeholder="Average Cost"
+					placeholder="Average Cost ($)"
 					defaultValue={averageCost}
 					class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
 				  />
@@ -157,10 +215,15 @@ const UpdateMyList = () => {
 				<div class="col-span-full">
 				  <button
 					type="submit"
-					class="px-4 py-2 font-medium text-white bg-blue-500 rounded-md"
+					class="px-4 py-2 mr-2 font-medium btn btn-outline btn-success rounded-md"
 				  >
 					Add
 				  </button>
+				  <Link to='/mylist'>
+				     <button className="btn btn-success btn-success text-white">
+						Back
+					 </button>
+				  </Link>
 				</div>
 			  </div>
 			</fieldset>

@@ -9,7 +9,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ErrorPage from "./ErrorPage";
 import HomeCardDetails from "../Pages/Home/HomeCardDetails";
-import MyListPageCard from "../Pages/MyListPageCard";
+import AllSpotCardDetails from "../Pages/AllSpotCardDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateMyList from "../Pages/UpdateMyList";
 
@@ -35,6 +35,11 @@ const routes = createBrowserRouter([
 			loader: () => fetch('http://localhost:5000/AllSpots')
 		},
 		{
+			path: "/allspots/:id",
+			element: <AllSpotCardDetails></AllSpotCardDetails>,
+			loader: ({params}) => fetch(`http://localhost:5000/allspot/${params.id}`)
+		},
+		{
 			path: "/addspots",
 			element: <PrivateRoutes><AddSpots></AddSpots></PrivateRoutes>
 		},
@@ -42,14 +47,10 @@ const routes = createBrowserRouter([
 			path: "/mylist",
 			element: <PrivateRoutes><MyList></MyList></PrivateRoutes>
 		},
-		// {
-		// 	path: "/myListCard",
-		// 	element: <MyListPageCard></MyListPageCard>
-		// },
 		{
-			path: "/mylist/:id/:id",
+			path: "/mylist/:emai/:id",
 			element: <UpdateMyList></UpdateMyList>,
-			loader: ({params}) => fetch(`http://localhost:5000/AllSpots/${params.id}/${params.id}`)
+			loader: ({params}) => fetch(`http://localhost:5000/AllSpots/${params.emai}/${params.id}`)
 		},
 		{
 			path: "/login",
