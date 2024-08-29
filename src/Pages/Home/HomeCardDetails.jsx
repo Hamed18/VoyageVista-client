@@ -22,11 +22,11 @@ const HomeCardDetails = () => {
             <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
               {tourist_spot_name}
             </h1>
-            <p className="text-lg mt-2 flex items-center"><FaMapMarkerAlt className="mr-2" /> {location}, {country_name}</p>
             <h2 className="mt-4 text-gray-700">
               {short_description}
             </h2>
-            <p className="mt-4 flex items-center"><FaMoneyBillWave className="mr-2" /> Average Cost: ${average_cost}</p>
+            <p className="text-lg mt-4 flex items-center"><FaMapMarkerAlt className="mr-2" /> {location}, {country_name}</p>
+            <p className="mt-2 flex items-center"><FaMoneyBillWave className="mr-2" /> Average Cost: ${average_cost}</p>
             <p className="mt-2 flex items-center"><FaCalendarAlt className="mr-2" /> Suitable for {seasonality} season</p>
             <p className="mt-2 flex items-center"><FaClock className="mr-2" /> Travel Time: {travel_time}</p>
             <p className="mt-2 flex items-center"><FaUsers className="mr-2" /> Total Visitors Per Year: {totalVisitorsPerYear}</p>
