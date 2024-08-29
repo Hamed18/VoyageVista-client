@@ -1,8 +1,11 @@
-import { useContext } from 'react';
+import { useContext,useRef } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../Providers/AuthProviders';
+
 const AddSpots = () => {
   const {user} = useContext(AuthContext);
+  const formRef = useRef(null);  // resist re-render of an element
+
 	const handleAddSpot = event => {
 		event.preventDefault();
 	  
@@ -49,6 +52,8 @@ const AddSpots = () => {
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);
+      // reset the form after filled up
+      formRef.current.reset();
 			// sweet alert
 			if (data.insertedId){
 				Swal.fire({
@@ -58,6 +63,7 @@ const AddSpots = () => {
 					confirmButtonText: 'cool'
 				});
 			}
+      //
 
 		})
 	  };
@@ -66,7 +72,7 @@ const AddSpots = () => {
     <div className="max-w-6xl mx-auto">
       <h3 className="text-center font-bold text-3xl mt-8 mb-6">Add New Tourist Spot</h3>
       <section class="p-6 bg-gray-100 dark:bg-gray-900">
-        <form onSubmit={handleAddSpot} class="container flex flex-col mx-auto space-y-12">
+        <form ref={formRef} onSubmit={handleAddSpot} class="container flex flex-col mx-auto space-y-12">
           <fieldset class="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-white dark:bg-gray-800">
             <div class="space-y-2 col-span-full lg:col-span-1">
               <p class="font-medium text-gray-900 dark:text-gray-100">
@@ -104,6 +110,7 @@ const AddSpots = () => {
                   type="text"
                   placeholder="User Name"
                   defaultValue={user?.displayName}
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -131,6 +138,7 @@ const AddSpots = () => {
                   id="image"
                   type="text"
                   placeholder="Image URL"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -145,6 +153,7 @@ const AddSpots = () => {
                   id="touristSpotName"
                   type="text"
                   placeholder="Tourist Spot Name"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -159,6 +168,7 @@ const AddSpots = () => {
                   id="countryName"
                   type="text"
                   placeholder="Country Name"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -173,6 +183,7 @@ const AddSpots = () => {
                   id="location"
                   type="text"
                   placeholder="Location"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -186,6 +197,7 @@ const AddSpots = () => {
                 <textarea
                   id="shortDescription"
                   placeholder="Short Description"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 ></textarea>
               </div>
@@ -200,6 +212,7 @@ const AddSpots = () => {
                   id="averageCost"
                   type="number"
                   placeholder="Average Cost"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -214,6 +227,7 @@ const AddSpots = () => {
                   id="seasonality"
                   type="text"
                   placeholder="e.g., Summer, Winter"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -228,6 +242,7 @@ const AddSpots = () => {
                   id="travelTime"
                   type="text"
                   placeholder="e.g., 7 days"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -242,6 +257,7 @@ const AddSpots = () => {
                   id="totalVisitors"
                   type="number"
                   placeholder="Total Visitors Per Year"
+                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>

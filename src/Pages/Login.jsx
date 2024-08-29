@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  // Auth redirect after login
   const location = useLocation();
   console.log('location in the login page', location);
   const navigate = useNavigate();
