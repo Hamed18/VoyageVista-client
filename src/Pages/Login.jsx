@@ -99,14 +99,14 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
 		  {/* google sign in */}
-          <div>  
-            <button className="btn btn-secondary m-2 item-center" onClick={handleGoogleSignIn}>Google Sign In</button>
+          <div className="flex items-center justify-center text-center">  
+            <button className="btn btn-secondary m-2 " onClick={handleGoogleSignIn}>Google </button>
           </div>
         </form>
 		<p className="text-center mt-4">
           Do not have an account?
-          <Link className="text-blue-600 font-bold" to="/register">
-            Register
+          <Link className="text-blue-600 font-bold ml-1" to="/register">
+             Register
           </Link>
         </p>
       </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
 	return (
 	  <div>
@@ -19,6 +21,7 @@ const Footer = () => {
 			  <br />
 			  Providing reliable tourism since 1992
 			</p>
+			<p>Copyright <Link to='https://github.com/Hamed18' className="text-blue-600">@Hamed</Link></p>
 		  </aside>
 		  <nav>
 			<h6 className="footer-title">Social</h6>

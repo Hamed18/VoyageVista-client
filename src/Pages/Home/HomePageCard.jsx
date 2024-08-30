@@ -4,7 +4,7 @@ const HomePageCard = ({spot}) => {
   const {_id,tourist_spot_name,country_name,image,short_description} = spot
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-xl">
+      <div className="card bg-base-100 m-2 shadow-xl">
         <figure className="px-10 pt-10">
           <img
             src={image}
@@ -17,7 +17,7 @@ const HomePageCard = ({spot}) => {
           <p>{short_description}</p>
           <div className="card-actions">
           <Link to={`/${_id}`} className="text-blue-600 font-bold flex justify-center">
-          <button className="btn btn-success flex justify-center p-2 text-white-500">
+          <button className="btn btn-outline btn-success flex justify-center p-2 text-white-500">
             View Details
           </button>
         </Link>
