@@ -8,8 +8,10 @@ const Home = () => {
 	return (
 		<div className="mb-2">
 			<Header></Header>
-			<h3 className="text-center text-3xl mt-8 mb-2 font-bold">Explore the World</h3>
-			<p className="text-center mb-8 mt-2">Dive into our curated selection of breathtaking destinations and unique experiences that await you around the globe. Whether you're dreaming of tranquil beaches, bustling cityscapes, or awe-inspiring natural wonders, our collection offers something for every type of traveler.</p>
+			<h3 className="text-center text-3xl mt-8 mb-2 font-bold">About Us</h3>
+			<p className="text-center mb-8 mt-2">
+				VoyageVista is a collection of breathtaking tourist destinations where tourist share their experiences. <br />It helps tourist to find their next adventure!
+		    </p>
 			{/* main section */}
 			<h3 className="text-center mt-8 mb-2 font-bold text-3xl">Hot Deals</h3>
             <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">

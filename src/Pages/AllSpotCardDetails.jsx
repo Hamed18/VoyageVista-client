@@ -27,6 +27,9 @@ const HomeCardDetails = () => {
     <div>
       <section className="bg-white text-gray-800">
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center p-6 sm:py-12 lg:py-24">
+          <h1 className="text-3xl font-bold leading-tight sm:text-4xl flex flex-col justify-center p-6 text-center lg:max-w-md xl:max-w-lg lg:text-left">
+              {touristSpotName}
+           </h1>
           <div className="flex items-center justify-center p-6 w-full lg:w-1/2">
             <img
               src={image}
@@ -35,9 +38,6 @@ const HomeCardDetails = () => {
             />
           </div>
           <div className="flex flex-col justify-center p-6 text-center lg:text-left lg:w-1/2">
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl mb-4">
-              {touristSpotName}
-            </h1>
             <p className="text-gray-700 mb-4">{shortDescription}</p>
             <p className="text-lg mb-4 flex items-center justify-center lg:justify-start">
               <FaMapMarkerAlt className="mr-2 text-violet-600" />

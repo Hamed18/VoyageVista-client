@@ -67,7 +67,7 @@ const Navbar = () => {
        <div className="navbar-end">
           {user ? (
             <div className="flex mr-2">
-              <div className="w-10 rounded-full md:tooltip md:tooltip-left" data-tip={user.displayName}>
+              <div className="hidden w-10 rounded-full md:tooltip md:tooltip-left" data-tip={user.displayName}>
                 <img alt="Tailwind CSS Navbar component" src={user?.photoURL? user.photoURL : {userdefaultPic}} className="rounded-full mr-1" />
               </div>
               <button onClick={handleSignOut} className="btn btn-primary">

@@ -11,6 +11,10 @@ const HomeCardDetails = () => {
     <div>
       <section className="bg-white text-gray-800">
         <div className="container mx-auto flex flex-col justify-center p-6 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+          <h1 className="text-3xl font-bold leading-tight sm:text-4xl flex flex-col justify-center p-6 text-center lg:max-w-md xl:max-w-lg lg:text-left">
+              {tourist_spot_name}
+           </h1>
+
           <div className="flex items-center justify-center p-6 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
             <img
               src={image}
@@ -19,9 +23,6 @@ const HomeCardDetails = () => {
             />
           </div>
           <div className="flex flex-col justify-center p-6 text-center lg:max-w-md xl:max-w-lg lg:text-left">
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
-              {tourist_spot_name}
-            </h1>
             <h2 className="mt-4 text-gray-700">
               {short_description}
             </h2>

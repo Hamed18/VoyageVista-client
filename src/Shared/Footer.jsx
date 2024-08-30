@@ -21,7 +21,7 @@ const Footer = () => {
 			  <br />
 			  Providing reliable tourism since 1992
 			</p>
-			<p>Copyright <Link to='https://github.com/Hamed18' className="text-blue-600">@Hamed</Link></p>
+			<p>Copyright <Link to='https://www.facebook.com/profile.php?id=100071972022937' className="text-blue-600">@Hamed</Link></p>
 		  </aside>
 		  <nav>
 			<h6 className="footer-title">Social</h6>

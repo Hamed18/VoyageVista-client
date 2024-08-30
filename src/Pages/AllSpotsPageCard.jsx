@@ -19,7 +19,7 @@ const AllSpotsPageCard = ({ spot }) => {
   } = spot;
 
   return (
-    <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800 p-2 m-2">
+    <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800 p-4 m-4">
       {/* User profile section */}
       <div className="flex items-center p-3 space-x-2">
         <img

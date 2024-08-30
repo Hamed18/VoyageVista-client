@@ -78,9 +78,9 @@ const Header = () => {
                     <div className='text-white space-y-7 pl-12 w-1/2'>
                         <h2 className='text-6xl font-bold'>{title}</h2>
                         <p>{sub_title}</p>
-                        <div>
+                        <div className="">
                             <Link to='/allspots'>
-                               <button className="btn btn-primary mr-5">Discover More</button>
+                               <button className="btn btn-primary">Discover More</button>
                             </Link>
                             <Link to='/mylist'>
                                <button className="btn btn-outline btn-secondary">Your List</button>

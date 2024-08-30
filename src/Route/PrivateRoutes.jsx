@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
 import { Navigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const PrivateRoutes = ({children}) => {
 	const {user,loading} = useContext(AuthContext);
@@ -12,8 +13,16 @@ const PrivateRoutes = ({children}) => {
 	if(user?.email){
         return children;
     }
-	return <Navigate state={location.pathname} to="/login" replace></Navigate>;
+	else {
+		Swal.fire({
+			title: "Oops!",
+			text: "You haven't login yet!!",
+			icon: "error",
+			confirmButtonText: 'Login'
+		});
+
+        return <Navigate state={location.pathname} to="/login" replace></Navigate>;
+	}
 
 };
-
 export default PrivateRoutes;

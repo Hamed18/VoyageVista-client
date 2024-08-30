@@ -63,7 +63,7 @@ const UpdateMyList = () => {
 				Swal.fire({
 					title: "Oops!",
 					text: "You haven't update anything!",
-					icon: "failure",
+					icon: "error",
 					confirmButtonText: 'OK'
 				});
 			}
@@ -225,7 +225,7 @@ const UpdateMyList = () => {
 					type="submit"
 					class="px-4 py-2 mr-2 font-medium btn btn-outline btn-success rounded-md"
 				  >
-					Add
+					Update
 				  </button>
 				  <Link to='/mylist'>
 				     <button className="btn btn-success btn-success text-white">
