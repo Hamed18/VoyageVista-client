@@ -41,7 +41,7 @@ const UpdateMyList = () => {
 		};
 		console.log('updated spot', updatedSpot);
 
-		fetch(`http://localhost:5000/AllSpots/${userEmail}/${_id}`,{
+		fetch(`https://voyage-vista-server-alpha.vercel.app/AllSpots/${userEmail}/${_id}`,{
             method: 'PUT',
 			headers: {
 				'content-type' : 'application/json'
@@ -73,6 +73,7 @@ const UpdateMyList = () => {
 	return (
 		<div className="max-w-6xl mx-auto">
 		<section class="p-6 bg-gray-100 dark:bg-gray-900">
+		  <h3 className="text-center text-3xl font-bold my-8">Update</h3>
 		  <form onSubmit={handleUpdateSpot} class="container flex flex-col mx-auto space-y-12">
 
   

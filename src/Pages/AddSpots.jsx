@@ -42,7 +42,7 @@ const AddSpots = () => {
 		console.log("New Tourist Spot Data:", newSpot);
 	  
 		// add logic here to submit this data to a server or handle it as needed
-		fetch('http://localhost:5000/allUsersAddedSpots',{
+		fetch('https://voyage-vista-server-alpha.vercel.app/allUsersAddedSpots',{
 			method: 'POST',
 			headers: {
 				'content-type' : 'application/json'
@@ -110,7 +110,6 @@ const AddSpots = () => {
                   type="text"
                   placeholder="User Name"
                   defaultValue={user?.displayName}
-                  required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
               </div>
@@ -211,7 +210,7 @@ const AddSpots = () => {
                 <input
                   id="averageCost"
                   type="number"
-                  placeholder="Average Cost"
+                  placeholder="e.g. 1000$"
                   required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
@@ -226,7 +225,7 @@ const AddSpots = () => {
                 <input
                   id="seasonality"
                   type="text"
-                  placeholder="e.g., Summer, Winter"
+                  placeholder="e.g. Summer, Winter"
                   required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
@@ -241,7 +240,7 @@ const AddSpots = () => {
                 <input
                   id="travelTime"
                   type="text"
-                  placeholder="e.g., 7 days"
+                  placeholder="e.g. 7 days"
                   required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />
@@ -256,7 +255,7 @@ const AddSpots = () => {
                 <input
                   id="totalVisitors"
                   type="number"
-                  placeholder="Total Visitors Per Year"
+                  placeholder="e.g. 10000"
                   required
                   class="w-full rounded-md border border-gray-300 dark:border-gray-700 focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:text-gray-50 dark:focus:ring-violet-600"
                 />

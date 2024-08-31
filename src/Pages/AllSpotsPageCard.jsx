@@ -23,7 +23,7 @@ const AllSpotsPageCard = ({ spot }) => {
       {/* User profile section */}
       <div className="flex items-center p-3 space-x-2">
         <img
-          src={image}
+          src={user.photoURL}
           alt="User Profile"
           className="object-cover object-center w-8 h-8 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-300"
         />
@@ -45,20 +45,19 @@ const AllSpotsPageCard = ({ spot }) => {
         <div className="space-y-2 mb-4">
           <div className="flex items-center text-gray-700 dark:text-gray-300">
             <FaDollarSign className="mr-2 text-lg" />
-            <span className="font-semibold">Average Cost: </span>$ {averageCost}
+            <span className="font-semibold">Average Cost: ${averageCost}</span>
           </div>
           <div className="flex items-center text-gray-700 dark:text-gray-300">
             <FaUsers className="mr-2 text-lg" />
-            <span className="font-semibold">Total Visitors Per Year: </span>
-            {totalVisitors}
+            <span className="font-semibold">Total Visitors Per Year: {totalVisitors}</span>
           </div>
           <div className="flex items-center text-gray-700 dark:text-gray-300">
             <FaClock className="mr-2 text-lg" />
-            <span className="font-semibold">Travel Time: </span> {travelTime}
+            <span className="font-semibold">Travel Time: {travelTime} days </span>
           </div>
           <div className="flex items-center text-gray-700 dark:text-gray-300">
             <FaCalendarAlt className="mr-2 text-lg" />
-            <span className="font-semibold">Seasonality: </span> {seasonality}
+            <span className="font-semibold">Seasonality: {seasonality} </span>
           </div>
         </div>
         {/* View Details button */}

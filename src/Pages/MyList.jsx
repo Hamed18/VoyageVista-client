@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const MyList = () => {
 	const {user} = useContext(AuthContext);
 	const [myList,setMyList]=useState([]);
-	const url = `http://localhost:5000/AllSpots/${user.email}`;
+	const url = `https://voyage-vista-server-alpha.vercel.app/AllSpots/${user.email}`;
 	useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -17,7 +17,7 @@ const MyList = () => {
 	const handleDelete = id => {
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/AllSpots/${id}`, {
+            fetch(`https://voyage-vista-server-alpha.vercel.app/AllSpots/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -42,7 +42,7 @@ const MyList = () => {
 //         confirmButtonText: 'Yes, delete it!'
 //     }).then((result) => {
 //         if (result.isConfirmed) {
-//             fetch(`http://localhost:5000/AllSpots/${id}`, {
+//             fetch(`https://voyage-vista-server-alpha.vercel.app/AllSpots/${id}`, {
 //                 method: 'DELETE'
 //             })
 //             .then(res => res.json())

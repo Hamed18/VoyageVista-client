@@ -80,7 +80,7 @@ const Header = () => {
                         <p>{sub_title}</p>
                         <div className="">
                             <Link to='/allspots'>
-                               <button className="btn btn-primary">Discover More</button>
+                               <button className="btn btn-primary mr-5">Discover More</button>
                             </Link>
                             <Link to='/mylist'>
                                <button className="btn btn-outline btn-secondary">Your List</button>

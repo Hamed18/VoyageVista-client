@@ -22,22 +22,22 @@ const routes = createBrowserRouter([
 		{
 			path: "/",
 			element: <Home></Home>,
-			loader: () => fetch('http://localhost:5000/TouristSpots')
+			loader: () => fetch('https://voyage-vista-server-alpha.vercel.app/TouristSpots')
 		},
 		{
 			path: "/:id",
 			element: <PrivateRoutes><HomeCardDetails></HomeCardDetails></PrivateRoutes>,
-			loader: ({params}) => fetch(`http://localhost:5000/TouristSpots/${params.id}`) 
+			loader: ({params}) => fetch(`https://voyage-vista-server-alpha.vercel.app/TouristSpots/${params.id}`) 
 		},
 		{
 			path: "/allspots",
 			element: <AllSpots></AllSpots>,
-			loader: () => fetch('http://localhost:5000/AllSpots')
+			loader: () => fetch('https://voyage-vista-server-alpha.vercel.app/AllSpots')
 		},
 		{
 			path: "/allspots/:id",
 			element: <PrivateRoutes><AllSpotCardDetails></AllSpotCardDetails></PrivateRoutes>,
-			loader: ({params}) => fetch(`http://localhost:5000/allspot/${params.id}`)
+			loader: ({params}) => fetch(`https://voyage-vista-server-alpha.vercel.app/allspot/${params.id}`)
 		},
 		{
 			path: "/addspots",
@@ -50,7 +50,7 @@ const routes = createBrowserRouter([
 		{
 			path: "/mylist/:emai/:id",
 			element: <UpdateMyList></UpdateMyList>,
-			loader: ({params}) => fetch(`http://localhost:5000/AllSpots/${params.emai}/${params.id}`)
+			loader: ({params}) => fetch(`https://voyage-vista-server-alpha.vercel.app/AllSpots/${params.emai}/${params.id}`)
 		},
 		{
 			path: "/login",

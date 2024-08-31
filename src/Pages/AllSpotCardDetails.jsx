@@ -5,6 +5,7 @@ import {
   FaMoneyBillWave,
   FaRegCalendarAlt,
   FaUsers,
+  FaClock
 } from "react-icons/fa";
 
 const HomeCardDetails = () => {
@@ -26,10 +27,10 @@ const HomeCardDetails = () => {
   return (
     <div>
       <section className="bg-white text-gray-800">
-        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center p-6 sm:py-12 lg:py-24">
-          <h1 className="text-3xl font-bold leading-tight sm:text-4xl flex flex-col justify-center p-6 text-center lg:max-w-md xl:max-w-lg lg:text-left">
+        <h1 className="text-3xl font-bold leading-tight sm:text-4xl pt-12 flex items-center justify-center text-center lg:max-w-md xl:max-w-lg lg:text-left">
               {touristSpotName}
-           </h1>
+        </h1>
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center p-6 sm:py-4 lg:py-8">
           <div className="flex items-center justify-center p-6 w-full lg:w-1/2">
             <img
               src={image}
@@ -56,7 +57,8 @@ const HomeCardDetails = () => {
               Total Visitors Per Year: {totalVisitors}
             </p>
             <p className="mb-4 text-lg flex items-center justify-center lg:justify-start">
-              Travel Time: {travelTime}
+              <FaClock className="mr-2 text-lg text-violet-600" />
+              Travel Time: {travelTime} days
             </p>
             <div className="mt-6 flex justify-center lg:justify-start">
               <Link to="/allspots">
