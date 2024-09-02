@@ -84,7 +84,7 @@ const MyList = () => {
 				(
 				<div>
                   <p className="text-center my-8">Your List is empty! <br />
-					<Link to='/addspot' className="text-blue-400">Add New</Link>
+					<Link to='/addspots' className="text-blue-400">Add New</Link>
 				  </p>
 				</div>  
 				)

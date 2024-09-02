@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaDollarSign, FaUsers, FaClock, FaCalendarAlt } from "react-icons/fa";
 import { AuthContext } from "../Providers/AuthProviders";
 import { useContext } from "react";
+import userImage from "../../src/assets/Images/user.png";
 
 const AllSpotsPageCard = ({ spot }) => {
   const { user } = useContext(AuthContext);
@@ -9,6 +10,7 @@ const AllSpotsPageCard = ({ spot }) => {
 
   const {
     _id,
+    profileImage,
     image,
     userName,
     touristSpotName,
@@ -23,7 +25,7 @@ const AllSpotsPageCard = ({ spot }) => {
       {/* User profile section */}
       <div className="flex items-center p-3 space-x-2">
         <img
-          src={user.photoURL}
+          src={userImage}
           alt="User Profile"
           className="object-cover object-center w-8 h-8 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-300"
         />

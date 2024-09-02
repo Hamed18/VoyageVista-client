@@ -19,9 +19,9 @@ const Header = () => {
                             <Link to='/allspots'>
                                <button className="btn btn-primary mr-5">Discover More</button>
                             </Link>
-                            <Link to='/mylist'>
+                            {/* <Link to='/mylist'>
                                <button className="btn btn-outline btn-secondary">Your List</button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -40,9 +40,9 @@ const Header = () => {
                             <Link to='/allspots'>
                                <button className="btn btn-primary mr-5">Discover More</button>
                             </Link>
-                            <Link to='/mylist'>
+                            {/* <Link to='/mylist'>
                                <button className="btn btn-outline btn-secondary">Your List</button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -61,9 +61,9 @@ const Header = () => {
                             <Link to='/allspots'>
                                <button className="btn btn-primary mr-5">Discover More</button>
                             </Link>
-                            <Link to='/mylist'>
+                            {/* <Link to='/mylist'>
                                <button className="btn btn-outline btn-secondary">Your List</button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -82,9 +82,9 @@ const Header = () => {
                             <Link to='/allspots'>
                                <button className="btn btn-primary mr-5">Discover More</button>
                             </Link>
-                            <Link to='/mylist'>
+                            {/* <Link to='/mylist'>
                                <button className="btn btn-outline btn-secondary">Your List</button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>

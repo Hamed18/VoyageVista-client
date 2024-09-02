@@ -13,6 +13,7 @@ const AddSpots = () => {
 	  
 		const userEmail = user.email;
 		const userName = user.displayName;
+    const profileImage = user.photoURL;
 		const image = form.image.value;
 		const touristSpotName = form.touristSpotName.value;
 		const countryName = form.countryName.value;
@@ -27,6 +28,7 @@ const AddSpots = () => {
 		const newSpot = {
 		  userEmail,
 		  userName,
+      profileImage,
 		  image,
 		  touristSpotName,
 		  countryName,

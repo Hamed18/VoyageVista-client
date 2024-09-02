@@ -62,7 +62,7 @@ const UpdateMyList = () => {
 			if (data.modifiedCount === 0){
 				Swal.fire({
 					title: "Oops!",
-					text: "You haven't update anything!",
+					text: "You haven't change anything!",
 					icon: "error",
 					confirmButtonText: 'OK'
 				});

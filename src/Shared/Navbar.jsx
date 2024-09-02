@@ -1,16 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import userdefaultPic from "../assets/Images/user.png";
-import { useContext } from "react";
+import { useContext,useState,useEffect } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 const Navbar = () => {
- const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme',theme);
+  },[theme]);
 
   const handleSignOut = () => {
-    logOut()
-    .then()
-    .catch();
-  }; 
+    logOut().then().catch();
+  };
 
   const navLinks = (
     <>
@@ -18,7 +22,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/allspots">All Spots</NavLink>
+        <NavLink to="/allspots">Discover</NavLink>
       </li>
       <li>
         <NavLink to="/addspots">Add Spots</NavLink>
@@ -64,22 +68,39 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
 
-       <div className="navbar-end">
-          {user ? (
-            <div className="flex mr-2">
-              <div className="hidden w-10 rounded-full md:tooltip md:tooltip-left" data-tip={user.displayName}>
-                <img alt="Tailwind CSS Navbar component" src={user?.photoURL? user.photoURL : {userdefaultPic}} className="rounded-full mr-1" />
-              </div>
-              <button onClick={handleSignOut} className="btn btn-primary">
-                Sign Out
+        <div className="navbar-end">
+            {/* Theme */}
+            <div className="flex justify-end p-4">
+              <button
+                onClick={() => setTheme(theme==='light'? 'dark':'light')}
+                className="btn btn-ghost bg-gray-200 dark:bg-gray-800 dark:text-white rounded-full">
+                 {theme==="light"? <FiMoon size={24}/> : <FiSun size={24}/>}
               </button>
             </div>
-          ) : (
-            <Link to="/login">
-              <button className="btn btn-primary">Login</button>
-            </Link>
-          )}  
-		</div> 
+          <div>
+            {user ? (
+              <div className="flex mr-2">
+                <div
+                  className="hidden w-10 rounded-full md:tooltip md:tooltip-left"
+                  data-tip={user.displayName}
+                >
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={user?.photoURL ? user.photoURL : { userdefaultPic }}
+                    className="rounded-full mr-1"
+                  />
+                </div>
+                <button onClick={handleSignOut} className="btn btn-primary">
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <Link to="/login">
+                <button className="btn btn-primary">Login</button>
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
